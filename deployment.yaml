@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-fluxcd
+  name: myapp-portainer
 spec:
   selector:
     matchLabels:
-      app: myapp-fluxcd
-  replicas: 3
+      app: myapp-portainer
+  replicas: 2
   template:
     metadata:
       labels:
-        app: myapp-fluxcd
+        app: myapp-portainer
     spec:
       containers:
-      - name: myapp-fluxcd
+      - name: myapp-portainer
         image: aftab2010/hello-world-hover:v3
         ports:
         - containerPort: 80
