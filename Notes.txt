@@ -1,0 +1,13 @@
+~# kubectl get sc
+   NAME                 PROVISIONER                RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+   standard (default)   k8s.io/minikube-hostpath   Delete          Immediate           false                  92d
+
+Community Edition
+
+~# helm repo add portainer https://portainer.github.io/k8s/
+~# helm repo update
+
+~# helm upgrade --install --create-namespace -n portainer portainer portainer/portainer --set service.type=LoadBalancer
+~# kubectl port-forward service/portainer -n portainer 5500:9443
+
+https://localhost:5500 ---> Will give the Portainer Dashboard
