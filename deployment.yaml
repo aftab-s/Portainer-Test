@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp-portainer
-        image: aftab2010/hello-world-hover:v3
+        image: aftab2010/hello-world-hover:v2
         ports:
         - containerPort: 80
         resources:
